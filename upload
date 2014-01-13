@@ -1,0 +1,28 @@
+#commit, pull, push, and deploy
+
+#Commit new changes to local repo
+COMMIT="git commit -am \"$1\""
+echo $COMMIT
+git commit -am "$1"
+
+#if[-z "$1"]; then git commit -am "default message"; else; git commit -am "$1"; fi
+
+PULL="git pull"
+echo $PULL
+echo `$PULL`
+
+PUSH="git push"
+echo $PUSH
+echo `$PUSH`
+
+DEPLOY="cap deploy stage=un_dev"
+echo $DEPLOY
+echo `$DEPLOY`
+
+CLEANUP="cap deploy:cleanup stage=un_dev"
+echo $CLEANUP
+echo `$CLEANUP`
+
+#echo `sudo git push`
+#echo `cap deploy stage=bb_dev`
+
